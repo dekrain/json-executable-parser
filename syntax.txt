@@ -1,0 +1,48 @@
+{
+	"type": "<javascript type>"
+	"value": <value>
+}
+
+{object
+	"type": "object"
+	"value": {
+		"type": "..."
+		"value": "..."
+	}
+}
+{string
+	"type": "string"
+	"value": "ABC"
+}
+{number/boolean
+	"type": "number"/"boolean"
+	"value": 5/true
+}
+{symbol
+	"type": "symbol"
+	"value": "Symbol.toStringTag" <DESCR>
+}
+{null
+	"type": "object"
+	"value": null
+}
+{undefined
+	"type": "undefined"
+}
+{regexp
+	"type": "regexp"
+	"value": "[hello|world]"
+	"options": "gi" <"/[hello|world]/gi">
+}
+{error
+	"type": "exception"
+	"value": {
+		"message": "Simple Error!"
+		"type": "Error" <constructor>
+	}
+}
+{function YAY
+	"type": "function"
+	"parameters": ["a","b"]
+	"body": "return a + b;"
+}
