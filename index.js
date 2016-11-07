@@ -10,7 +10,7 @@ function parseValue(type, value) {
 		case 'undefined': return void 0;
 		case 'symbol': return Symbol(val);
 		case 'regexp': return new RegExp(val, value.options);
-		case 'error': if (val.type.substr(-5) === 'Error') return new (gl[val.type])(val.message); // Do not try it at home !
+		case 'exception': if (val.type.substr(-5) === 'Error') return new (gl[val.type])(val.message); // Do not try it at home !
 		case 'object':
 		case 'function':
 			break;
