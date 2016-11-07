@@ -28,8 +28,8 @@ function parseValue(type, value) {
 		var args = value.parameters,
 			body = value.body, f;
 		try {
-			f = new Function(args.concat([body]));
-		} catch (e) { throw new TypeError(`Invalid function structure:\n${JSON.stringify(value,null,2)}`); }
+			f = Function.apply(null, args.concat([body]));
+		} catch (e) { throw new TypeError(`Invalid function structure:\n${JSON.stringify(value,null,2)}\n${e}`); }
 		return f;
 	}
 }
