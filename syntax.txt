@@ -5,9 +5,11 @@
 
 {object
 	"type": "object"
-	"value": {
-		"type": "..."
-		"value": "..."
+	"keys": {
+		"key": {
+			"type": "..."
+			"value": "..."
+		}
 	}
 }
 {string

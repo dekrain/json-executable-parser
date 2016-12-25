@@ -21,7 +21,11 @@ function parseValue(type, value) {
 		var res;
 		if (val === null) return null;
 		try {
-			res = parseValue(val.type, val);
+			res = {};
+			val = value.keys;
+			for (var key in val) {
+				res[key] = parseValue(val[key].type, val[key]);
+			}
 		} catch (e) { throw e; } // Rethrow in this stack
 		return res;
 	} else { // function
